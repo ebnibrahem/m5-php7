@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+
+#prevent access to all folders except whitch has .httacess Options -MultiViews
+Options -Indexes
+
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?$1 [QSA,L]
+
+
+</IfModule>

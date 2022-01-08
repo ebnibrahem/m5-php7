@@ -1,0 +1,28 @@
+{
+	"name": "mezooo/mic5",
+	"description": "small PHP OOP MVC framework",
+	"autoload": {
+		"psr-4": {
+			"M5\\": "app/",
+			"M5\\MVC\\": "app/core",
+			"M5\\Controllers\\": "app/_c",
+			"M5\\Models\\": "app/_m",
+			"M5\\Library\\": "libs/"
+		},
+		"files": [
+			"libs/functions.php",
+			"app/config/config_db.php",
+			"app/config/config_mail.php",
+			"app/config/config.php"
+		]
+	},
+	"require": {
+		"phpmailer/phpmailer": "~5.2",
+		"illuminate/database": "~5.1"
+	},
+	"config": {
+		"preferred-install": "dist",
+		"sort-packages": true,
+		"optimize-autoloader": true
+	}
+}
